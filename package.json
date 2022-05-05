@@ -1,0 +1,22 @@
+{
+  "name": "learning-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaderBC/learning-nodejs.git"
+  },
+  "author": "Bartłomiej Strama",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/BaderBC/learning-nodejs/issues"
+  },
+  "homepage": "https://github.com/BaderBC/learning-nodejs#readme",
+  "description": "",
+  "dependencies": {
+    "typescript": "^4.6.4"
+  }
+}
