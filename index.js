@@ -1,11 +1,10 @@
-let http = require('http'),
-    url = require('url'),
-    fs = require('fs');
+let http = require('http');
 
-http.createServer(function (req, res){
-    fs.readFile()
+http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
-    let q = url.parse(req.url, true).query
-    res.write(`${q.day} ${q.month} ${q.year}`);
-    res.end();
+    res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
+    res.write('<input type="file" name="filetoupload"><br>');
+    res.write('<input type="submit">');
+    res.write('</form>');
+    return res.end();
 }).listen(8080);
