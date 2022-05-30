@@ -1,4 +1,7 @@
 /*
+Made by 
+Bartłomiej Strama
+
 This code use data from
 https://www.nasa.gov/mission_pages/kepler/main/index.html
 to search the habitable planets that have been captured by this telescope
@@ -27,12 +30,16 @@ fs.createReadStream('kepler_data.csv')
     .on('data', (data) => {
         if (isHabitablePlanet(data)){
             habitablePlanets.push(data);
+            console.log('\x1b[36m%s\x1b[0m', data['kepler_name'])
         }
     })
     .on('error',(err) => {
         console.error(err);
     })
     .on('end', () => {
+        console.log('\x1b[42m',`${habitablePlanets.length} habitable planets found ;)`, '\x1b[0m')
+        /*
         console.log(habitablePlanets.map(planet => planet['kepler_name']))
         console.log(`${habitablePlanets.length} habitable planets found ;)`);
+        */
     })
